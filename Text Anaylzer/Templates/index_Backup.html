@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django | Home Page</title>
+</head>
+<body>
+<h1> Welcome To Text Analyzer </h1>
+<h2> Type your Text </h2>
+<!--<h2> {{name}} is from {{place}}</h2>-->
+<form action = '/analyzer' method = 'post'> {% csrf_token %}
+    <textarea name = 'text' style = 'width : 600px; height : 200px'> </textarea><br>
+    <input type = 'checkbox' name = 'removepunc'> Remove Punctuations <br>
+    <input type = 'checkbox' name = 'caps'> Upper Case <br>
+    <input type = 'checkbox' name = 'newlineremover'> New Line Remover <br>
+    <input type = 'checkbox' name = 'xtraspaceremover'> Extra Space Remover <br>
+    <input type = 'checkbox' name = 'numremover'> Number Remover <br>
+    <input type = 'checkbox' name = 'charcount'> Character Count <br>
+    <button type = 'submit' > Text Analyzer </button>
+</form>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Hello!
+This is My Static File in Blog
